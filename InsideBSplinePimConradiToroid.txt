@@ -1,0 +1,32 @@
+!Fortran 2003+
+program insidebsplinepimconraditoroid
+    real :: t, x, z
+    integer :: n, P0x, P0z, P1x, P1z, P2x, P2z, P3x, P3z
+    
+c   This program computes 20 pairs of numbers from the parameter, t forming the coordinates of the b-spline shape of the vortex of the toroid.
+
+c   2d space curves are Interpolation, fitting Bezier Curves within constraints of points and gradients of first and last pairs of points. 
+c    Axis key
+c	Cartesian coordinate system
+c	x, green
+c	y, red
+c	z, blue
+
+c control points:  Measured from Pim's model, but this program accepts any measurements the user wants. 
+c	Start point 	P0=[2000mm, 0mm]			axis[x,z] axis color [green,blue]
+c	Control point	P1=[2000mm, 10000mm]		axis[x,z] axis color [green,blue]
+c	Control point	P2=[13165.2mm, 10080.3mm]		axis[x,z] axis color [green,blue]
+c	End point		P3=[9750mm, 9723.7mm]		axis[x,z] axis color [green,blue]
+
+
+    print *, "What is the inside diameter of the Toroid in milimeters?"
+    read *, P0x, P1x 						c inputs the same value into both 
+    x(t) = ((1-t)^3)*2000+3*((1-t)^2)*t*2000+3*(1-t)*t^2*13165+t^3*9750)     c the Bezier curve, with the sum expanded and the binomials calculated
+    z(t) = 0+3*(1-3)^2*10000+3*t^2*(1-t)*10080+9723*t^3		c I have typed te coordinates in
+    print *, "The coordinates are", x(t), z(t)				c print the array x(t),y(t)
+    print *, "Bye!"
+    end
+
+c For some reason I changed the control point P2z to 8793mm, because 'it did not fit', P3x is 9750mm, probably from a 
+c real life measurment and a ratio read from the photograph
+c I take it that the reader can look at the pdf or google for a spline to see the points, job done, 2 more nasty parchments in the recycling bin
