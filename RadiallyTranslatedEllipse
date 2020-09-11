@@ -1,0 +1,18 @@
+c Find the height of the control point P2
+c method
+c 1. Equation of ellipse, translate 
+c 2. Differentiate find gradient at 9750mm
+c 3. Use equation of straight line, m=gradient at point P3
+
+c Pim's toroid is such that it's cross section is elliptical up to point P3, this is an observation and a constraint.
+c The center of the ellipse lays on the equatorial plane, and for this calculation is tanslated in the r direction 
+
+    REAL :: r, Z, r_translate
+    INTEGER :: a,b
+
+c major axis dimension = 21500mm/2  =  10750mm		from the photograph of the toroid
+c height of toroid from photograph 9770mm
+
+    ((r-r_translate)^2)/10750) + z^2/9770 = 1
+
+c references to similar
