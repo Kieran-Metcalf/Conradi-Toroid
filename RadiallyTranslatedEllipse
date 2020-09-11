@@ -4,16 +4,19 @@ c 1. Equation of ellipse, translate
 c 2. Differentiate find gradient at 9750mm
 c 3. Use equation of straight line, m=gradient at point P3
 
-c Pim's toroid is such that it's cross section is elliptical up to point P3, this is an observation and a constraint.
-c The center of the ellipse lays on the equatorial plane, and for this calculation is tanslated in the r direction 
+c Pim's toroid is such that it's cross section, 2d radial slice is elliptical up to point +-P3, this is an observation and a constraint.
+c The center of the ellipse lays on the equatorial plane, and for this calculation is tanslated radially outward, in the r direction 
 c by a distance equal to the major radius, a=10750mm=r_translate
-    REAL :: r, Z, r_translate
+    REAL :: r, z, r_translate
     INTEGER :: a,b
 
 c major axis dimension = 21500mm/2  =  10750mm		from the photograph of the toroid
 c height of toroid from photograph 9770mm
 
-    ((r-10750)^2)/10750) + z^2/9770 = 1
-    ((r-)^2)/10750) + z^2/9770 = 1
+    ((r-10750)^2)/10750^2) + z^2/9770^2 = 1
 
-c references to similar
+c rearrange for z and take positive result, thus considering the imaginary line above the equatorial plane, when rotated this forms the constraining toroidal plane containing the tilted
+c ellipses, but this script is concerned only with calculating the 2D gradient so that the equation for the vortex of the toroid can be found. This equation, again 
+c describes a plane which contains the inner helix of Pim's toroid art piece. 
+
+    
