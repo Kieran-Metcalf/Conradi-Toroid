@@ -24,6 +24,6 @@ c describes a plane which contains the inner helix of Pim's toroid art piece.
     (z(r=9750)
     PRINT*,(z(r=9750)
     
-c r=9750mm is an empirical measurment and is where the toroid is no longer elliptical and the inside vortex begins. Now differentiate z(r) wrt r at this point and
+c r=9750mm is an empirical measurment and is where the toroid is no longer elliptical and the inside vortex begins.https://3dwarehouse.sketchup.com/model/ud84e5f64-04fe-478e-808e-300ba52df9c7/Cylinder-to-be-deleted-to-leave-the-outside-arcs Now differentiate z(r) wrt r at this point and
 c this will give poth the 2D coordinates and the 2D gradient to match at the boundary clinder. 
 
