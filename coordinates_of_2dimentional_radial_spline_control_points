@@ -1,0 +1,29 @@
+c This work in progress program calculates the z and r coordinates of the radial spline control points in the radial plane. 
+c This program is written in Fortran90
+
+c Input parameters,
+    Integer Radial distance from z axis to boundary between the ellipse and the inside vortex
+    Integer Height of the toroid. 
+    Integer radius of whole toroid
+
+c Decleration of variables
+    Real z,r
+
+c Output Parameters
+c   Height of point at boundary
+c   Radial gradient of point at boundary. 
+c   Height of control point P2
+
+    print *, enter Integer Radial distance from z axis to boundary between the ellipse and the inside vortex Integer Height of the toroid. Integer radius of whole toroid
+    read *, toroid_radius, distance_to_boundary, height_of_toroid
+
+c equation of ellipse to rotate about the z axis to form the extremity of Pim’s toroid. 
+c    z(r) = + SQRT(  (1 - ((r-(R/2))/(R/2))^2   )  )*H
+c  first derrivitave https://www.wolframalpha.com/ dz/dr = (H (R - 2 r))/(R sqrt(r (R - r)))
+    gradient = (H (R - 2 r))/(R sqrt(r (R - r)))
+c    Find the height of the ellipse at this boundary, i.e. the 2D coordinates of P3
+    HeightAtBoundary = + SQRT(  (1 - ((boundary-(R/2))/(R/2))^2   )  )*H
+c eqn of straight line to find point P2, y=mx+c
+c    z = gradient * r + P3z
+    P3z = gradient * r_boundary + P2z
+c P2r=0
