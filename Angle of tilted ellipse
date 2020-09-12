@@ -1,2 +1,6 @@
 c Fortran90
-    real :: radial_distance_to_first_intersection_of_tilted_ellipses
+c input parameters
+    real :: r_clind_coord_inside_edge, r_clind_coord_boundary, r_clind_coord_intersection, toroid_height, toroid_radius
+c output parameters
+    real :: angle_of_tilted_ellipse
+    
