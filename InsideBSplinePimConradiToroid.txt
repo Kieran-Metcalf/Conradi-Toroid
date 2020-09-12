@@ -1,9 +1,11 @@
 !Fortran 2003+
+c   This program computes 20 pairs of numbers from the parameter, t forming the coordinates of the b-spline shape of the vortex of the toroid.
+
 program insidebsplinepimconraditoroid
     real :: t, x, z
     integer :: n, P0x, P0z, P1x, P1z, P2x, P2z, P3x, P3z
     
-c   This program computes 20 pairs of numbers from the parameter, t forming the coordinates of the b-spline shape of the vortex of the toroid.
+
 
 c   2d space curves are Interpolation, fitting Bezier Curves within constraints of points and gradients of first and last pairs of points. 
 c    Axis key
