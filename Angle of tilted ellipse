@@ -1,6 +1,10 @@
 c Fortran90
 c input parameters
-    real :: r_clind_coord_inside_edge, r_clind_coord_boundary, r_clind_coord_intersection, toroid_height, toroid_radius
+    real :: r_clindcoords_inside_edge, r_clindcoords_boundary, r_clindcoords_intersections, toroid_height, toroid_radius
 c output parameters
     real :: angle_of_tilted_ellipse
+    
+c equation of ellipse leads to this formula, see hand written pdf.
+
+    
     
