@@ -1,0 +1,10 @@
+c This Fortran90 code calculates phi_small and phi_large, the bearings of the points where the tilited elipses intersect the elipse-vortex boundary.
+c Note it is not where the tilted elipses cross, that probably does not require calculating.
+
+c parameters
+
+    real phi_small, phi_large
+    real 9750 radius of boundary 
+    height of where ellipse intercets boundary = 9770*sqrt(1-(16/1894))
+    
+c constants
