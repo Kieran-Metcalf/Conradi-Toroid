@@ -1,8 +1,9 @@
 c Fortran90
 c input parameters
     real :: r_clindcoords_inside_edge, r_clindcoords_boundary, r_clindcoords_intersections, toroid_height, toroid_radius
-c output parameters
-    real :: angle_of_tilted_ellipse
+c the following angle parameter is defined as the angle the planes of the tilted ellipses make with eachother on the equatorial plane, it could have been 
+c with the equatorial plane itself, but I decided on this because it is an actual measurment that can be made on Pim's artwork
+    real :: angle_between_ellipses
     
 c equation of ellipse leads to this formula, see hand written pdf.
 
