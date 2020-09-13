@@ -1,11 +1,22 @@
 c Fortran90
+
+
 c input parameters
-    real :: r_clindcoords_inside_edge, r_clindcoords_boundary, r_clindcoords_intersections, toroid_height, toroid_radius
+    real :: r_clindcoords_inside_edge, r_clindcoords_boundary, angle_between_ellipses, toroid_height, toroid_radius, 
+    integer  pairs_ellipses
 c the following angle parameter is defined as the angle the planes of the tilted ellipses make with eachother on the equatorial plane, it could have been 
 c with the equatorial plane itself, but I decided on this because it is an actual measurment that can be made on Pim's artwork
-    real :: angle_between_ellipses
+
+
+c Output parameters, or parameter which are intrinsic to the shape and number of ribs forming Pim's toroid. 
+    real :: r_clindcoords_intersections
     
+
 c equation of ellipse leads to this formula, see hand written pdf.
+
+    z(r)=toroid_height*sqrt(1-((2*r/toroid_radius)^2)
+    
+c solved at r = r_clindcoords_intersections
 
     
     
