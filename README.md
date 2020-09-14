@@ -10,4 +10,4 @@ A helix is best described with a parametric equation in cylindrical polar coordi
 
 Of course there is no 'buisness case' for this, so ...
 
-Finding coordinates of end points at the boundary is trivial trigganometry, finding the starting parameters to match the gradients may be impossible as only the waist is controlled, unless maybe it's shape is describes by a multi order polynomial. 
+Finding coordinates of end points at the boundary is trivial trigganometry, finding the starting parameters of the helix to match the gradients may be impossible as only the waist is controlled, unless maybe it's shape is describes by a multi order polynomial. 
