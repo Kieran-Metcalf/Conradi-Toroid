@@ -19,5 +19,7 @@ c equation of tilted ellipse leads to this formula, see hand written pdf.
 c solved at r = r_clindcoords_intersections
 c coordinates of tilted ellipse at boundary Finding coordinates of end points at the boundary is trivial as, by direct measurment 
 
+c Create phi_large and phi_small
+
     
     
