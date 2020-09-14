@@ -14,7 +14,7 @@ c Output parameters, or parameter which are intrinsic to the shape and number of
 
 c equation of tilted ellipse leads to this formula, see hand written pdf.
 
-    z'(r)=SQRT((1 - r^2/(0.5*toroid_radius)^2)*(toroid_height/COS(0.5*ellipses_angle)^2)
+    z_ellipse(r_ellipse)=SQRT((1 - r_ellipse^2/(0.5*toroid_radius)^2)*(toroid_height/COS(0.5*ellipses_angle)^2)
     
 c solved at r = r_clindcoords_intersections
 c coordinates of tilted ellipse at boundary Finding coordinates of end points at the boundary is trivial as, by direct measurment 
