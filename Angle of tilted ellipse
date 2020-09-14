@@ -28,7 +28,7 @@ c parameters
 
     real phi_small, phi_large
     r_clindcoords_boundary
-    height of where ellipse intercepts boundary = 9770*sqrt(1-(16/1894))
+    height of where ellipse intercepts boundary = r_clindcoords_boundary*sin(0.5*phi_small)/tan(0.5*angle_ellipses)
     
 c constants   
     
