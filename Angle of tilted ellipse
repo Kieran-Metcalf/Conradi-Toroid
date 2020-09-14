@@ -21,5 +21,14 @@ c coordinates of tilted ellipse at boundary Finding coordinates of end points at
 
 c Create phi_large and phi_small
 
+ c  calculate phi_small and phi_large, the angle in the xy plane from x of the points where the tilited elipses intersect the elipse-vortex boundary.
+c Note it is not where the tilted elipses cross, that probably does not require calculating.
+
+c parameters
+
+    real phi_small, phi_large
+    real 9750 radius of boundary 
+    height of where ellipse intercets boundary = 9770*sqrt(1-(16/1894))
     
+c constants   
     
