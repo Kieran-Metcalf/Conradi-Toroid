@@ -6,4 +6,6 @@ As a failed frustrated phycicist, I looked towards CERN atom smasher and how the
 
 So the task in the spirit of true computer science is to describe Pim Conradi's toroid in less than 100 lines of Fortran 90 code, the circular array of 12 pairs of translated and rotated elipces should be achieveable. And the point gradient matched inner helical spirals not to difficult. (cough cough LOL, really?)
 
+A helix is best described with a parametric equation in cylindrical polar coordinates, that is with 
+
 Of course there is no 'buisness case' for this, so ...
