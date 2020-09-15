@@ -31,6 +31,5 @@ c parameters
     height of where ellipse intercepts boundary = (-b+SQRT(b^2-4ac))/2a  ! quadratic
     Where a = 1/(tan(0.5*angle_between_ellipses)
         b = -((0.5*toroid_radius)^2)*COS(0.5*angle_between_ellipses)  /   toroid_height*SIN(0.5*angle_between_ellipses)   ! equate ellipse triangle with tri in plane see pdf
-    
-c constants   
+        c = (0.5*toroid_radius)^2 - r_clindcoords_boundary^2
     
