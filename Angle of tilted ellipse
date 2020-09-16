@@ -1,9 +1,11 @@
 c Fortran90
 
+PROGRAM CoordinatesOfJoinsInTheConradiToroid
+IMPLICIT  NONE
 
 c input parameters
     real :: r_clindcoords_inside_edge, r_clindcoords_boundary, angle_between_ellipses, toroid_height, toroid_radius, 
-    integer  pairs_ellipses
+    integer  :: pairs_ellipses
 c the following angle parameter is defined as the angle the planes of the tilted ellipses make with eachother on the equatorial plane, it could have been 
 c with the equatorial plane itself, but I decided on this because it is an actual measurment that can be made on Pim's artwork
 
@@ -25,11 +27,56 @@ c Create phi_large and phi_small
 c Note it is not where the tilted elipses cross, that probably does not require calculating.
 
 c parameters
+   
 
+   REAL  :: a, b, c
+   REAL  :: d
+   REAL  :: root1, root2
     real phi_small, phi_large
     r_clindcoords_boundary
     height of where ellipse intercepts boundary = (-b+SQRT(b^2-4ac))/2a  ! quadratic
-    Where a = 1/(tan(0.5*angle_between_ellipses)
-        b = -((0.5*toroid_radius)^2)*COS(0.5*angle_between_ellipses)  /   toroid_height*SIN(0.5*angle_between_ellipses)   ! equate ellipse triangle with tri in plane see pdf
+        a = 1/(tan(0.5*angle_between_ellipses)
+        b = -((0.5*toroid_radius)^2)*COS(0.5*angle_between_ellipses)  /   toroid_height*SIN(0.5*angle_between_ellipses)   ! equate ellipse triangle with triangle in plane see pdf
         c = (0.5*toroid_radius)^2 - r_clindcoords_boundary^2
+
+        ! ---------------------------------------------------
+!   Solve  Ax^2 + Bx + C = 0 given B*B-4*A*C >= 0
+!   Now, we are able to detect complex roots.
+! ---------------------------------------------------
+
+  QuadraticEquation
+
+
+   WRITE(*,*) 'a = ', a
+   WRITE(*,*) 'b = ', b
+   WRITE(*,*) 'c = ', c
+   WRITE(*,*)
+
+!  compute the square root of discriminant d
+
+   d = b*b - 4.0*a*c
+   IF (d >= 0.0) THEN              ! is it solvable?
+      d     = SQRT(d)
+      root1 = (-b + d)/(2.0*a)     ! first root
+      root2 = (-b - d)/(2.0*a)     ! second root
+      WRITE(*,*)  'Roots are ', root1, ' and ', root2
+   ELSE                            ! complex roots
+      WRITE(*,*)  'There is no real roots!'
+      WRITE(*,*)  'Discriminant = ', d
+   END IF
+
+! migrate the positive root of the quadratic (may omitt if root1 is answer)
     
+    REAL :: joins_height
+
+    If root1>0 THEN
+    joins_height=root1
+    IF root2>0 THEN
+    joins_height=root2
+
+
+
+    
+
+
+END PROGRAM  CoordinatesOfJoinsInTheConradiToroid
