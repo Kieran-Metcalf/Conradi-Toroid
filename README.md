@@ -1,6 +1,6 @@
 # Conradi-Toroid
 An attempt to describe Pim Conradi's geodesics on a toroid (which may be called orbodesics) toroid architecture structure. 
-CAD models https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/a5f1dd3a-8c16-432a-b31a-1d6feb326f8f, the beautiful inside spirals are missing, 
+CAD models https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/a5f1dd3a-8c16-432a-b31a-1d6feb326f8f, the aesthetically pleasing beautiful inside spirals are missing, 
 To improve on polygons, or straight sections by hand to match the known gradients and points, it may be described with the helix function nestled with a parmectric function, or with point-grad-pont-grad Bezier curves. Least lines of code would be the former. 
 
 CERN atom smasher and how they describe particle trajectories, FORTRAN still a lower level language. 
